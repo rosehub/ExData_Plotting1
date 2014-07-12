@@ -1,0 +1,5 @@
+data<-read.table("power/household_power_consumption_2007.txt",sep=";",header=TRUE)
+par(mfrow=c(1,1))
+plot(x=strptime(paste(data$Date,data$Time),format="%d/%m/%Y %H:%M:%S"),y=data$Global_active_power,type="l",xlab=" ",ylab="Global Active Power (kilowatts)")
+dev.copy(png,file="plot2.png")
+dev.off()

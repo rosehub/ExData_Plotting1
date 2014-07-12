@@ -1,0 +1,5 @@
+data<-read.table("power/household_power_consumption_2007.txt",sep=";",header=TRUE)
+par(mfrow=c(1,1))
+hist(as.numeric(data$Global_active_power),col="red",main="Global Active Power", xlab="Global Active Power(kilowatts)")
+dev.copy(png,file="plot1.png")
+dev.off()
